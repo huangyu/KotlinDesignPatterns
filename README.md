@@ -25,8 +25,16 @@ Kotlin设计模式
 
 [Singleton.kt](/src/com/huangyu/singleton/Singleton.kt)
 
-建造者
+建造者：
+
 ![](images/Builder.png)
 
 [Singleton.kt](/src/com/huangyu/builder/Builder.kt)
+
+适配器：
+
+![](images/Adapter.png)
+
+[Singleton.kt](/src/com/huangyu/adapter/Adapter.kt)
+
 
