@@ -10,7 +10,7 @@ class Builder {
 		}
 
 		companion object {
-			inline fun buildProduct(b: Builder.() -> Unit) = Builder().apply(b).build()
+			inline fun build(block: Builder.() -> Unit) = Builder().apply(block).build()
 		}
 	}
 
