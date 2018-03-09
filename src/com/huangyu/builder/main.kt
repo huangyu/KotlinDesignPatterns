@@ -2,7 +2,7 @@ package com.huangyu.builder
 
 fun main(args: Array<String>) {
 
-	val product = Builder.Product.build {
+	val product = Product.build {
 		name = "name"
 		num = 1
 	}
