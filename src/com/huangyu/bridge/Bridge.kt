@@ -1,39 +1,43 @@
 package com.huangyu.bridge
 
-interface IPicture {
-	fun display()
-}
-
-class PNG : IPicture {
-	override fun display() {
-		println("PNG")
+class Bridge {
+	
+	interface IPicture {
+		fun display()
 	}
-}
 
-class JPG : IPicture {
-	override fun display() {
-		println("JPG")
+	class PNG : IPicture {
+		override fun display() {
+			println("PNG")
+		}
 	}
-}
 
-abstract class System(val pic: IPicture) {
-	abstract fun showPic()
-}
-
-class Mac : System(pic = JPG()) {
-	override fun showPic() {
-		pic.display()
+	class JPG : IPicture {
+		override fun display() {
+			println("JPG")
+		}
 	}
-}
 
-class Linux : System(pic = PNG()) {
-	override fun showPic() {
-		pic.display()
+	abstract class System(val pic: IPicture) {
+		abstract fun showPic()
 	}
-}
 
-class Window : System(pic = JPG()) {
-	override fun showPic() {
-		pic.display()
+	class Mac : System(pic = JPG()) {
+		override fun showPic() {
+			pic.display()
+		}
 	}
+
+	class Linux : System(pic = PNG()) {
+		override fun showPic() {
+			pic.display()
+		}
+	}
+
+	class Window : System(pic = JPG()) {
+		override fun showPic() {
+			pic.display()
+		}
+	}
+	
 }
