@@ -37,4 +37,8 @@ Kotlin设计模式
 
 [Singleton.kt](/src/com/huangyu/adapter/Adapter.kt)
 
+桥接：
 
+![](images/Bridge.png)
+
+[Bridge.kt](/src/com/huangyu/singleton/Bridge.kt)
