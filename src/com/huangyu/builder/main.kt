@@ -1,7 +1,6 @@
 package com.huangyu.builder
 
 fun main(args: Array<String>) {
-
 	val product = Product.build {
 		name = "name"
 		num = 1
@@ -9,5 +8,4 @@ fun main(args: Array<String>) {
 	
 	println(product.name);
 	println(product.num);
-
 }
