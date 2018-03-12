@@ -1,43 +1,31 @@
 package com.huangyu.bridge
 
 class Bridge {
-	
-	interface IPicture {
-		fun display()
+
+	interface Implemetor {
+		fun operationImpl()
 	}
 
-	class PNG : IPicture {
-		override fun display() {
-			println("PNG")
+	class ConcreteImplemetorA : Implemetor {
+		override fun operationImpl() {
+			println("ConcreteImplemetorA")
 		}
 	}
 
-	class JPG : IPicture {
-		override fun display() {
-			println("JPG")
+	class ConcreteImplemetorB : Implemetor {
+		override fun operationImpl() {
+			println("ConcreteImplemetorB")
 		}
 	}
 
-	abstract class System(val pic: IPicture) {
-		abstract fun showPic()
+	abstract class Abstraction(val impl: Implemetor) {
+		abstract fun operation()
 	}
 
-	class Mac : System(pic = JPG()) {
-		override fun showPic() {
-			pic.display()
+	class RefinedAbstraction : Abstraction(impl = ConcreteImplemetorA()) {
+		override fun operation() {
+			impl.operationImpl()
 		}
 	}
 
-	class Linux : System(pic = PNG()) {
-		override fun showPic() {
-			pic.display()
-		}
-	}
-
-	class Window : System(pic = JPG()) {
-		override fun showPic() {
-			pic.display()
-		}
-	}
-	
 }
