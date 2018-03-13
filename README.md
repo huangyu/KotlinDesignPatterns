@@ -92,7 +92,7 @@ Kotlin设计模式
 享元：
 享元模式以共享的方式高效地支持大量细粒度对象的重用，享元对象能做到共享的关键是区分了可共享内部状态和不可共享外部状态。
 
-![](images/FlyWeight.png)
+![](images/Flyweight.png)
 
 [FlyWeight.kt](/src/com/huangyu/flyweight/FlyWeight.kt)
 ---
